@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #153677, #4e085f);
+    padding: 10px;
+}
+
+.todo-app {
+    width: 100%;
+    max-width: 540px;
+    background: #a38d8d69;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.todo-app h2{
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    border-radius: 30px;
+    margin-bottom: 25px;
+}
+
+
+input{
+    flex: 1;
+    border-radius: 30px;
+    outline: none;
+    background: #edeef0;
+    padding: 10px;
+    font-size: 16px;
+    color: #002765;
+    border-bottom: 2px solid #002765;
+}
+
+input:focus{
+    border: 2px solid #002765;
+    outline: none;
+    box-shadow: none;
+    transition: 0.3s;
+    color: #002765;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+button{
+    border: none;
+    outline: none;
+    background: #002765;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 16px;
+}
+
+button:hover{
+    background: #4e085f;
+    color: #fff;
+}
+
+
+ul li{
+    list-style: none;
+    padding: 10px 0;
+    border-bottom: 1px solid #edeef0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 16px;
+    color: #002765;
+    background: transparent;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    &:hover{
+        background: #edeef0;
+        color: #002765;
+        border: none;
+        transition: 0.3s;
+        box-shadow: none;
+        border-radius: 30px;
+        padding: 10px;
+        font-size: 18px;
+        font-weight: 700;
+    }
+}
+
+ul li ::before{
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: #002765;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.3s;
+    box-sizing: border-box;
+    border-radius: 50%;
+}
+
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+    color: #fff;
+}
+
+ul li.checked::before {
+    background: #e2dbdb;
+    transform: translateY(-50%) rotate(45deg);
+}
